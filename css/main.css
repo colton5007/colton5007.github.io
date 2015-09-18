@@ -289,7 +289,7 @@ textarea {
 	position: absolute;
 	background: none;
 	display: block;
-	border: double #111111;
+	border: double 8px #111111;
 	left: 20%;
 	top: 3%;
 	color: #FFFFFF;
