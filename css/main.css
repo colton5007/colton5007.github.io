@@ -285,7 +285,11 @@ textarea {
 
 #info {
 	width: 60%;
+<<<<<<< HEAD
 	height: 45%;
+=======
+	height: 40%;
+>>>>>>> e8952e66cee955098b6dfd58c22d211a1239d009
 	position: absolute;
 	background: none;
 	display: block;
@@ -352,7 +356,7 @@ textarea {
 
 #end, #start {
 	position: absolute;
-	font-size: 12vw;
+	font-size: 10vw;
 	color: #FFFFFF;
 	width: 80%;
 	height: 80%;
