@@ -115,6 +115,7 @@ function startGame() {
 	displayQuestion(1);
 	score=1;
 	document.getElementById('info').style.visibility='visible';
+	document.getElementById('info').innerHTML='';
 	document.getElementById('questionNum').style.visibility='visible';
 	document.getElementById('button1').style.visibility='visible';
 	document.getElementById('button2').style.visibility='visible';
