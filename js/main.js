@@ -79,7 +79,9 @@ function gameOver(num) {
 	var end = document.getElementById('end');
 	end.style.visibility='visible';
 	var restartButton = document.getElementById('again');
-	end.textContent='You completed ' + (score-1) + ' Labors of Hercules';
+	var labor = 's';
+	if(score==2) labor='';
+	end.textContent='You completed ' + (score-1) + ' Labor' + labor + ' of Hercules';
 	end.appendChild(restartButton);
 }
 
