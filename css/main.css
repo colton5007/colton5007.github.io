@@ -276,19 +276,27 @@ textarea {
 
 * {
 	background:#111111;
+	background-image: url('Background.png');
+}
+
+#body {
+	
 }
 
 #info {
 	width: 60%;
 	height: 25%;
 	position: absolute;
-	background-color: #222222;
+	background: none;
 	display: block;
+	border: double #111111;
 	left: 20%;
 	top: 3%;
 	color: #FFFFFF;
 	text-align: center;
 	vertical-align: middle;
+	visibility: hidden;
+
 	
 }
 
@@ -296,53 +304,59 @@ textarea {
     	width: 40%;
     	height: 20%;
     	position: absolute;
-    	background-color: #222222;
-    	border: double;
-		border-color: #555555;
+		background: none;
+    	background-color: #2B5A88;
+    	border: double 8px;
+    	border-color: #000022;
     	display: block;
     	left: 5%;
     	top: 40%;
     	color: #FFFFFF;
     	text-align: center;
     	vertical-align: middle;
+    	visibility: hidden;
+
 }
     
 #button2 {
     	width: 40%;
     	height: 20%;
     	position: absolute;
-    	background-color: #222222;
-    	border: double;
-    	border-color: #555555;
+		background: none;
+    	background-color: #2B5A88;
+    	border: double 8px;
+    	border-color: #000022;
     	display: block;
     	left: 55%;
     	top: 40%;
     	color: #FFFFFF;
     	text-align: center;
     	vertical-align: middle;
+    	visibility: hidden;
 }
 
-#button1:hover, #button2:hover, #again:hover{
-	border-color: #003300;
+#button1:hover, #button2:hover, #again:hover, #startButton:hover{
+	border-color: #FFFFFF;
 }
 
 #questionNum {
 	color: #FFFFFF;
 	width: 100px;
-	font-size: 40px;
+	font-size: 4vw;
 	display: block;
 	border: groove 8px;
 	border-color: #555555;
 	text-align: center;
+	visibility: hidden;
 }
 
-#end {
+#end, #start {
 	position: absolute;
-	font-size: 120px;
+	font-size: 12vw;
 	color: #FFFFFF;
 	width: 80%;
 	height: 80%;
-	background-color: #222222;
+	background-color: none;
 	border: groove 8px;
 	border-color: #555555;
 	display: block;
@@ -353,15 +367,22 @@ textarea {
 	top 10%;
 }
 
-#again {
-	font-size: 20px;
+#again, #startButton {
+	font-size: 4vw;
 	position: absolute;
-	color: #005500;
+	color: #FFFFFF;
 	width: 20%;
 	height: 10%;
-	background-color: #111111;
+	background: none;
+	background-color: #2B5A88;
 	border: double;
 	border-color: #555555;
 	left: 40%;
 	top: 80%;
+	text-align: center;
+}
+
+#start>p {
+	font-size: 4vw;
+	background: none;
 }

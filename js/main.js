@@ -79,7 +79,7 @@ function gameOver(num) {
 	var end = document.getElementById('end');
 	end.style.visibility='visible';
 	var restartButton = document.getElementById('again');
-	end.textContent='You completed ' + (score-1) + ' trials of Hercules';
+	end.textContent='You completed ' + (score-1) + ' Labors of Hercules';
 	end.appendChild(restartButton);
 }
 
@@ -91,7 +91,7 @@ function win() {
 	var end = document.getElementById('end');
 	end.style.visibility='visible';
 	var restartButton = document.getElementById('again');
-	end.textContent='You have completed the 12 trials of Hercules';
+	end.textContent='You have completed the 12 Labors of Hercules';
 	end.appendChild(restartButton);
 }
 
@@ -107,4 +107,18 @@ function restart() {
 	}
 }
 
-displayQuestion(1);
+function start() {
+	document.getElementById('start').style.visibility='visible';
+}
+
+function startGame() {
+	displayQuestion(1);
+	score=1;
+	document.getElementById('info').style.visibility='visible';
+	document.getElementById('questionNum').style.visibility='visible';
+	document.getElementById('button1').style.visibility='visible';
+	document.getElementById('button2').style.visibility='visible';
+	document.getElementById('start').style.visibility='hidden';
+}
+
+start();
