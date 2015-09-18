@@ -25,6 +25,8 @@ new Question('Question 2', new Choice(false, 'False Answer'), new Choice(true, '
 new Question('Question 3', new Choice(false, 'False Answer'), new Choice(true, 'True Answer')),
 new Question('Question 4', new Choice(true, 'True Answer'), new Choice(false, 'False Answer'))];
 
+var deathMsgs = ['Your arrows do nothing! The lion lunges and the rest is just mythology...']
+
 function displayChoice1(choice) {
 	var button1 = document.getElementById("button1");
 	button1.textContent = choice.words;
@@ -81,7 +83,7 @@ function gameOver(num) {
 	var restartButton = document.getElementById('again');
 	var labor = 's';
 	if(score==2) labor='';
-	end.textContent='You completed ' + (score-1) + ' Labor' + labor + ' of Hercules';
+	end.textContent=deathMsgs[num-1] + '\n You completed ' + (score-1) + ' Labor' + labor + ' of Hercules';
 	end.appendChild(restartButton);
 }
 
