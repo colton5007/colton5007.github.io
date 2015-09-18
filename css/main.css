@@ -277,10 +277,7 @@ textarea {
 * {
 	background:#111111;
 	background-image: url('Background.png');
-}
-
-#body {
-	
+    font-family: 'Verdana';
 }
 
 #info {
@@ -297,8 +294,7 @@ textarea {
 	text-align: center;
 	vertical-align: middle;
 	visibility: hidden;
-
-	
+    font-size: 2.5vw;
 }
 
 #button1 {
@@ -316,6 +312,7 @@ textarea {
     	text-align: center;
     	vertical-align: middle;
     	visibility: hidden;
+        font-size: 3vw;
 
 }
     
@@ -334,6 +331,7 @@ textarea {
     	text-align: center;
     	vertical-align: middle;
     	visibility: hidden;
+        font-size: 3vw;
 }
 
 #button1:hover, #button2:hover, #again:hover, #startButton:hover{
@@ -384,6 +382,6 @@ textarea {
 }
 
 #start>p {
-	font-size: 4vw;
+	font-size: 3vw;
 	background: none;
 }
