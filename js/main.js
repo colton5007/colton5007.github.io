@@ -20,7 +20,7 @@ function Question(words, choice1, choice2) {
 	this.choice2 = choice2;
 }
 
-var questions = [new Question('Question 1', new Choice(true, 'True Answer'), new Choice(false, 'False Answer')), 
+var questions = [new Question('You are on a quest to kill the Nemean lion, who is believed to have invincible skin. The lion has been terrorizing through the hills, what will you do to cease his terror?', new Choice(true, 'Choke the lion to death with your club'), new Choice(false, 'Shoot at him from a distance to avoid close combat')), 
 new Question('Question 2', new Choice(false, 'False Answer'), new Choice(true, 'True Answer')), 
 new Question('Question 3', new Choice(false, 'False Answer'), new Choice(true, 'True Answer')),
 new Question('Question 4', new Choice(true, 'True Answer'), new Choice(false, 'False Answer'))];
@@ -79,7 +79,9 @@ function gameOver(num) {
 	var end = document.getElementById('end');
 	end.style.visibility='visible';
 	var restartButton = document.getElementById('again');
-	end.textContent='You completed ' + (score-1) + ' Labors of Hercules';
+	var labor = 's';
+	if(score==2) labor='';
+	end.textContent='You completed ' + (score-1) + ' Labor' + labor + ' of Hercules';
 	end.appendChild(restartButton);
 }
 
@@ -119,6 +121,7 @@ function startGame() {
 	document.getElementById('button1').style.visibility='visible';
 	document.getElementById('button2').style.visibility='visible';
 	document.getElementById('start').style.visibility='hidden';
+	document.getElementById('start').innerHTML='';
 }
 
 start();

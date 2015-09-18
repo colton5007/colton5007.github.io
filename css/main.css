@@ -285,11 +285,11 @@ textarea {
 
 #info {
 	width: 60%;
-	height: 25%;
+	height: 45%;
 	position: absolute;
 	background: none;
 	display: block;
-	border: double #111111;
+	border: double 8px #111111;
 	left: 20%;
 	top: 3%;
 	color: #FFFFFF;
@@ -310,7 +310,7 @@ textarea {
     	border-color: #000022;
     	display: block;
     	left: 5%;
-    	top: 40%;
+    	top: 60%;
     	color: #FFFFFF;
     	text-align: center;
     	vertical-align: middle;
@@ -328,7 +328,7 @@ textarea {
     	border-color: #000022;
     	display: block;
     	left: 55%;
-    	top: 40%;
+    	top: 60%;
     	color: #FFFFFF;
     	text-align: center;
     	vertical-align: middle;
