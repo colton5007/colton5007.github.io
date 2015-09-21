@@ -32,24 +32,33 @@
 		<div id="button2" onclick="checkQuestion(2)">
 
 		</div>
+		
 		<div id="start">
 			<audio autoplay>
 				<source src="audio/intro.mp3" type="audio/mpeg">
 			</audio>
 			<p>
 				Once upon a time there was a man named Hercules, he was both god and human. Desperately he wanted to become a god like his father Zeus. 
-				Zeus made a deal with him if he could complete 12 impossible tasks he would become a god. You are Hercules, the choice is up to you.
+				Zeus made a deal with him if he could complete 10(12) impossible tasks he would become a god. You are Hercules, the choice is up to you.
 			</p>
 			<div id="startButton" onclick="startGame()">
 				Start
 			</div>
 		</div>
+		
 		<div id="end">
 			<div id="again" onclick="restart()">
 				Restart
 			</div>
 		</div>
 
+		<div id="transition">
+			<p>Originally you were only ordered to complete 10 tasks but since cleaning the stables and the killing the hydra didn't count because they weren't completely finished(hydra used the help of Iolaus and stables were washed with the help of the river instead of his own manpower) you have to complete 2 more.</p>
+			<div id="continue" onclick="continueGame()">
+				Continue
+			</div>
+		</div>
+		
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
 

@@ -312,7 +312,7 @@ textarea {
     	text-align: center;
     	vertical-align: middle;
     	visibility: hidden;
-        font-size: 3vw;
+        font-size: 2.5vw;
 
 }
     
@@ -331,10 +331,10 @@ textarea {
     	text-align: center;
     	vertical-align: middle;
     	visibility: hidden;
-        font-size: 3vw;
+        font-size: 2.5vw;
 }
 
-#button1:hover, #button2:hover, #again:hover, #startButton:hover{
+#button1:hover, #button2:hover, #again:hover, #startButton:hover, #continue:hover{
 	border-color: #FFFFFF;
 }
 
@@ -349,9 +349,9 @@ textarea {
 	visibility: hidden;
 }
 
-#end, #start {
+#end, #start, #transition {
 	position: absolute;
-	font-size: 6vw;
+	font-size: 4vw;
 	color: #FFFFFF;
 	width: 80%;
 	height: 80%;
@@ -366,7 +366,8 @@ textarea {
 	top 10%;
 }
 
-#again, #startButton {
+
+#again, #startButton, #continue {
 	font-size: 4vw;
 	position: absolute;
 	color: #FFFFFF;
@@ -381,7 +382,7 @@ textarea {
 	text-align: center;
 }
 
-#start>p {
-	font-size: 3vw;
+#start>p, #transition>p {
+	font-size: 2vw;
 	background: none;
 }
