@@ -1,5 +1,7 @@
-var score = 1;
+var cur = 1;
+var score = 0;
 var lastTrials = false;
+
 function Choice(correct, words) {
 	this.correct = correct;
 	this.words = words;
@@ -22,41 +24,41 @@ function Question(words, choice1, choice2) {
 }
 
 var questions = [new Question('You are on a quest to kill the Nemean lion, who is believed to have invincible skin. The lion has been terrorizing through the hills, how do you proceed?', 
-	new Choice(true, 'Choke the lion to death with your club.'), 
-	new Choice(false, 'Shoot at him from a distance to avoid close combat.')), 
+	new Choice(true, 'Yes'), 
+	new Choice(false, 'No')), 
 new Question('You must now kill the nine-headed hydra, whenever you kill one head two more come back, how do you proceed?', 
-	new Choice(false, 'Use the Head of Medusa to turn it to stone.'), 
-	new Choice(true, 'Burn the neck of the beast after severing each head.')), 
+	new Choice(false, 'Yes'), 
+	new Choice(true, 'No')), 
 new Question('Eurystheus ordered you to bring him the Hind(Female Deer) of Ceryneia(small town 50 miles North of Mycenae). You must capture it without hurting it so that Artemis won\'t be enraged. How do you proceed?', 
-	new Choice(false, 'Set up a trap with delicious fruits to lure it into being captured.'), 
-	new Choice(true, 'Follow this deer for a year and shoot it when it is off guard.')),
+	new Choice(false, 'Yes'), 
+	new Choice(true, 'No')),
 new Question('Eursytheus has ordered that you capture the Erymanthian Boar, a beast that gouges the people of the countryside with his tusks. How do you proceed?',
-	new Choice(true, 'Capture the boar in a net.'), 
-	new Choice(false, 'Lure the boar into a cave and seal the entrance.')),
+	new Choice(true, 'Yes'), 
+	new Choice(false, 'No')),
 new Question('Your next tasks is a bit unusual, because you are required to do some housekeeping work. You have to clean king Augean\'s stables that withholds more livestock then all other ranches\' livestock together in one day. How do you proceed?', 
-	new Choice(false, 'Pile dirt on top of the droppings hiding them.'), 
-	new Choice(true, 'Change the routes of the rivers to rinse out everything.')),
+	new Choice(false, 'Yes'), 
+	new Choice(true, 'No')),
 new Question('Now you must drive away a flock of man-eating birds which have gathered near the town of Stymphalos. How do you proceed?', 
-	new Choice(false, 'Use the thunderbolts given to you by Zeus making fly away.'), 
-	new Choice(true, 'Scare the birds off with noisemakers forged by Hephaestus.')),
+	new Choice(false, 'Yes'), 
+	new Choice(true, 'No')),
 new Question('You are ordered to capture the bull of Crete which has caused King Minos to lose his wife\'s love and bore a half-man, half-bull monster. How do you proceed?', 
-	new Choice(false, 'Enrage it with a red muleta and force it into a dug out.'), 
-	new Choice(true, 'Wrestle it to the ground and return it to Eurystheus.')),
+	new Choice(false, 'Yes'), 
+	new Choice(true, 'No')),
 new Question('Eurystheus has sent you to steal the man-eating mares of Diomedes, the king of the Brinstones. How do you proceed?', 
-	new Choice(false, 'Sneak behind the Brinstones and steal them unnoticed.'), 
-	new Choice(true, 'Fight your way to the horses and take them by force.')),
+	new Choice(false, 'Yes'), 
+	new Choice(true, 'No')),
 new Question('Hippolyte\'s was notorious for leading the great female warriors called the Amazons, and was gifted a special leather belt by Aris, the war god.  Eurystheus wants to give it to his daughter and commanded you to bring back Hippolyte\'s leather belt. How do you proceed?', 
-	new Choice(true, 'Kill Hippolyte and steal her belt.'), 
-	new Choice(false, 'Drug her servants and negotiate with her.')),
+	new Choice(true, 'Yes'), 
+	new Choice(false, 'No')),
 new Question('You are supposed to steal the cattle of Geryon, but first you must pass Geryon. How will you kill Geryon?', 
-	new Choice(true, 'Shoot him with with your bow avoiding direct combat.'), 
-	new Choice(false, 'Cut him into ten-thousand pieces and spread them out all over the world.')),
+	new Choice(true, 'Yes'), 
+	new Choice(false, 'No')),
 new Question('The next to last labor (one of the hardest) is to collect golden apples from Hera\'s tree and give it to Eurystheus. After fighting Kyknos, Antaeus, Bursitis, and killing the eagle that pecked at Prometheus\' liver for 30 years, you made a deal with Atlas to hold the weight of the world on your shoulders while he went to get the golden apple. He returns with the apples but insists on returning it to Eurystheus and let you hold up the world\'s weight for eternity. How do you proceed?', 
-	new Choice(false, 'Ask Zeus to momentarily paralyze Atlas while you take the apples.'), 
-	new Choice(true, 'Ask Atlas to trade position with him for a minute so you can get some padding and elope with the apple.')),
+	new Choice(false, 'Yes'), 
+	new Choice(true, 'No')),
 new Question('For the twelfth and final labor, you must go to the Underworld and kidnap the beast called Cerberus who guards the entrance to Hades. How do you proceed?', 
-	new Choice(true, 'Subdue the beast with your bare hands.'), 
-	new Choice(false, 'Trick Hades into trading your life for Cerberus.'))
+	new Choice(true, 'Yes'), 
+	new Choice(false, 'No'))
 ];
 
 var deathMsgs = ['Your arrows do nothing! The lion lunges and the rest is just mythology...',
@@ -84,14 +86,9 @@ function displayChoice2(choice) {
 
 function displayQuestion(num) {
 	if (questions.length < num) {
-		win();
+		gameOver();
 		return;
-	} else if(lastTrials == false) {
-		if(num==11) {
-			transition();
-			return;
-		}
-	}
+	} 
 	var question = questions[num - 1];
 	var questionDiv = document.getElementById("info");
 	document.getElementById("questionNum").textContent = num;
@@ -102,23 +99,27 @@ function displayQuestion(num) {
 }
 
 function checkQuestion(buttonId) {
-	var question = questions[score - 1];
+	var question = questions[cur - 1];
 	document.getElementById('info').innerHTML='';
 	if (buttonId == 1) {
 		if (question.choice1.correct) {
 			score++;
-			displayQuestion(score);
-			console.log('Correct Answer Picked for Question: ' + (score-1));
+			cur++;
+			displayQuestion(cur);
+			console.log('Correct Answer Picked for Question: ' + (cur));
 		} else {
-			gameOver(score);
+			cur++;
+			displayQueston(cur)
 		}
 	} else {
 		if (question.choice2.correct) {
 			score++;
-			displayQuestion(score);
+			cur++;
+			displayQuestion(cur);
 			console.log('Correct Answer Picked for Question: ' + (score-1));
 		} else {
-			gameOver(score);
+			cur++;
+			displayQuestion(cur);
 		}
 	}
 }
@@ -133,7 +134,8 @@ function gameOver(num) {
 	var restartButton = document.getElementById('again');
 	var labor = 's';
 	if(score==2) labor='';
-	end.textContent=deathMsgs[num-1] + '\n You completed ' + (score-1) + ' Labor' + labor + ' of Hercules';
+	//end.textContent=deathMsgs[num-1] + '\n You completed ' + (score-1) + ' Labor' + labor + ' of Hercules';
+	//TODO ADD GAME OVER SCREEN INCLUDING CHARACTER ALIGNMENT
 	end.appendChild(restartButton);
 }
 
