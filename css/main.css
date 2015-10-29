@@ -373,8 +373,8 @@ textarea {
 	color: #FFFFFF;
 	width: 20%;
 	height: 10%;
-	background: none;
-	background-color: #2B5A88;
+	/*background: none;
+	background-color: #2B5A88;*/
 	border: double;
 	border-color: #555555;
 	left: 40%;
