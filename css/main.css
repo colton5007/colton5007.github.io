@@ -301,8 +301,8 @@ textarea {
     	width: 40%;
     	height: 20%;
     	position: absolute;
-		background: none;
-    	background-color: #2B5A88;
+		/*background: none;
+    	background-color: #2B5A88;*/
     	border: double 8px;
     	border-color: #000022;
     	display: block;
@@ -320,8 +320,8 @@ textarea {
     	width: 40%;
     	height: 20%;
     	position: absolute;
-		background: none;
-    	background-color: #2B5A88;
+		/*background: none;
+    	background-color: #2B5A88;*/
     	border: double 8px;
     	border-color: #000022;
     	display: block;
