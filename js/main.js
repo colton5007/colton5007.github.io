@@ -101,24 +101,19 @@ function displayQuestion() {
 function checkQuestion(buttonId) {
 	var question = questions[cur - 1];
 	document.getElementById('info').innerHTML='';
+	cur++;
 	if (buttonId == 1) {
 		if (question.choice1.correct) {
 			score++;
-			cur++;
 			displayQuestion(cur);
-			console.log('Correct Answer Picked for Question: ' + (cur));
 		} else {
-			cur++;
 			displayQueston(cur)
 		}
 	} else {
 		if (question.choice2.correct) {
 			score++;
-			cur++;
 			displayQuestion(cur);
-			console.log('Correct Answer Picked for Question: ' + (score-1));
 		} else {
-			cur++;
 			displayQuestion(cur);
 		}
 	}
@@ -190,8 +185,7 @@ function start() {
 }
 
 function startGame() {
-	displayQuestion(1);
-	score=1;
+	displayQuestion(cur);
 	document.getElementById('info').style.visibility='visible';
 	document.getElementById('questionNum').style.visibility='visible';
 	document.getElementById('button1').style.visibility='visible';
