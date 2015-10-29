@@ -84,16 +84,16 @@ function displayChoice2(choice) {
 	button2.textContent = choice.words;
 }
 
-function displayQuestion(num) {
-	if (questions.length < num) {
+function displayQuestion() {
+	if (questions.length < cur) {
 		gameOver();
 		return;
 	} 
-	var question = questions[num - 1];
+	var question = questions[cur - 1];
 	var questionDiv = document.getElementById("info");
-	document.getElementById("questionNum").textContent = num;
+	document.getElementById("questionNum").textContent = cur;
 	questionDiv.innerHTML = question.words;
-	createSoundFile(num, questionDiv);
+	createSoundFile(cur, questionDiv);
 	displayChoice1(question.choice1);
 	displayChoice2(question.choice2);
 }
@@ -136,11 +136,12 @@ function gameOver(num) {
 	if(score==2) labor='';
 	//end.textContent=deathMsgs[num-1] + '\n You completed ' + (score-1) + ' Labor' + labor + ' of Hercules';
 	//TODO ADD GAME OVER SCREEN INCLUDING CHARACTER ALIGNMENT
+	end.textContent="Score: "+score;
 	end.appendChild(restartButton);
 }
 
 function win() {
-	document.getElementById('info').style.visibility='hidden';
+	/*document.getElementById('info').style.visibility='hidden';
 	document.getElementById('questionNum').style.visibility='hidden';
 	document.getElementById('button1').style.visibility='hidden';
 	document.getElementById('button2').style.visibility='hidden';
@@ -148,7 +149,8 @@ function win() {
 	end.style.visibility='visible';
 	var restartButton = document.getElementById('again');
 	end.textContent='You have completed the 12 Labors of Hercules';
-	end.appendChild(restartButton);
+	end.appendChild(restartButton);*/
+	gameOver(cur);
 }
 
 function transition() {
