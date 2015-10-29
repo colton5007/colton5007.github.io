@@ -175,7 +175,8 @@ function continueGame() {
 function restart() {
 	if(document.getElementById('end').style.visibility=='visible') {
 		displayQuestion(1);
-		score=1;
+		score=0;
+		cur=1;
 		document.getElementById('info').style.visibility='visible';
 		document.getElementById('questionNum').style.visibility='visible';
 		document.getElementById('button1').style.visibility='visible';
