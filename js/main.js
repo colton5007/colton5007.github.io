@@ -17,24 +17,13 @@ function createSoundFile(num, element) {
 	element.appendChild(audio);
 }
 
-function Question(words, choice1, choice2) {
+function Question(words, choices) {
 	this.words = words;
-	this.choice1 = choice1;
-	this.choice2 = choice2;
+	this.choices = choices;
+	this.count = choices.size();
 }
 
-var questions = [new Question('You are on a quest to kill the Nemean lion, who is believed to have invincible skin. The lion has been terrorizing through the hills, how do you proceed?', 
-	new Choice(true, 'Yes'), 
-	new Choice(false, 'No')), 
-new Question('You must now kill the nine-headed hydra, whenever you kill one head two more come back, how do you proceed?', 
-	new Choice(false, 'Yes'), 
-	new Choice(true, 'No')), 
-new Question('Eurystheus ordered you to bring him the Hind(Female Deer) of Ceryneia(small town 50 miles North of Mycenae). You must capture it without hurting it so that Artemis won\'t be enraged. How do you proceed?', 
-	new Choice(false, 'Yes'), 
-	new Choice(true, 'No')),
-new Question('Eursytheus has ordered that you capture the Erymanthian Boar, a beast that gouges the people of the countryside with his tusks. How do you proceed?',
-	new Choice(true, 'Yes'), 
-	new Choice(false, 'No')),
+var questions = [
 new Question('Your next tasks is a bit unusual, because you are required to do some housekeeping work. You have to clean king Augean\'s stables that withholds more livestock then all other ranches\' livestock together in one day. How do you proceed?', 
 	new Choice(false, 'Yes'), 
 	new Choice(true, 'No')),
@@ -84,6 +73,34 @@ function displayChoice2(choice) {
 	button2.textContent = choice.words;
 }
 
+function displayChoice3(choice) {
+    var button3 = document.getElementyById("button3");
+    button3.textContent = choice.words;
+}
+
+function displayChoice4(choice) {
+    var button4 = document.getElementyById("button4");
+    button4.textContent = choice.words;
+}
+
+function setQuestionStyle(count) {
+    var button1 = document.getElementyById("button1");
+    var button2 = document.getElementyById("button2");
+    var button3 = document.getElementyById("button3");
+    var button4 = document.getElementyById("button4");
+    if(count==2) {
+        button3.style.visibility='hidden';
+        button4.style.visibility='hidden';
+        button1.top=60%;
+        button2.top=60%;
+    } else {
+        button3.style.visibility='visible';
+        button4.style.visibility='visible';
+        button1.top=50%;
+        button2.top=50%;
+    }
+}
+
 function displayQuestion() {
 	if (questions.length < cur) {
 		gameOver();
@@ -94,8 +111,16 @@ function displayQuestion() {
 	document.getElementById("questionNum").textContent = cur;
 	questionDiv.innerHTML = question.words;
 	createSoundFile(cur, questionDiv);
-	displayChoice1(question.choice1);
-	displayChoice2(question.choice2);
+	setQuestionStyle(count);
+	if(question.count==2) {
+	    displayChoice1(question.choices[0]);
+	    displayChoice2(question.choices[1]);
+	} else {
+	    displayChoice1(question.choices[0]);
+	    displayChoice2(question.choices[1]);
+	    displayChoice3(question.choices[2]);
+	    displayChoice4(question.choices[3]);
+	}
 }
 
 function checkQuestion(buttonId) {
@@ -109,8 +134,22 @@ function checkQuestion(buttonId) {
 		} else {
 			displayQueston(cur)
 		}
-	} else {
+	} else if (buttonId == 2){
 		if (question.choice2.correct) {
+			score++;
+			displayQuestion(cur);
+		} else {
+			displayQuestion(cur);
+		}
+	} else if (buttonId == 3){
+		if (question.choice3.correct) {
+			score++;
+			displayQuestion(cur);
+		} else {
+			displayQuestion(cur);
+		}
+	} else if (buttonId == 4){
+		if (question.choice4.correct) {
 			score++;
 			displayQuestion(cur);
 		} else {
