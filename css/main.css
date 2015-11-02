@@ -307,7 +307,7 @@ textarea {
     	border-color: #003300;
     	display: block;
     	left: 5%;
-    	top: 60%;
+    	top: 50%;
     	color: #FFFFFF;
     	text-align: center;
     	vertical-align: middle;
@@ -326,12 +326,50 @@ textarea {
     	border-color: #003300;
     	display: block;
     	left: 55%;
-    	top: 60%;
+    	top: 50%;
     	color: #FFFFFF;
     	text-align: center;
     	vertical-align: middle;
     	visibility: hidden;
         font-size: 2.5vw;
+}
+
+#button3 {
+    	width: 40%;
+    	height: 20%;
+    	position: absolute;
+		/*background: none;
+    	background-color: #2B5A88;*/
+    	border: double 8px;
+    	border-color: #003300;
+    	display: block;
+    	left: 5%;
+    	top: 75%;
+    	color: #FFFFFF;
+    	text-align: center;
+    	vertical-align: middle;
+    	visibility: hidden;
+        font-size: 2.5vw;
+
+}
+
+#button4 {
+    	width: 40%;
+    	height: 20%;
+    	position: absolute;
+		/*background: none;
+    	background-color: #2B5A88;*/
+    	border: double 8px;
+    	border-color: #003300;
+    	display: block;
+    	left: 5%;
+    	top: 75%;
+    	color: #FFFFFF;
+    	text-align: center;
+    	vertical-align: middle;
+    	visibility: hidden;
+        font-size: 2.5vw;
+
 }
 
 #button1:hover, #button2:hover, #again:hover, #startButton:hover, #continue:hover{
