@@ -287,7 +287,7 @@ textarea {
 	position: absolute;
 	background: none;
 	display: block;
-	border: double 8px #111111;
+	border: double 8px #003300;
 	left: 20%;
 	top: 3%;
 	color: #FFFFFF;
@@ -304,7 +304,7 @@ textarea {
 		/*background: none;
     	background-color: #2B5A88;*/
     	border: double 8px;
-    	border-color: #000022;
+    	border-color: #003300;
     	display: block;
     	left: 5%;
     	top: 60%;
@@ -323,7 +323,7 @@ textarea {
 		/*background: none;
     	background-color: #2B5A88;*/
     	border: double 8px;
-    	border-color: #000022;
+    	border-color: #003300;
     	display: block;
     	left: 55%;
     	top: 60%;
@@ -357,7 +357,7 @@ textarea {
 	height: 80%;
 	background-color: none;
 	border: groove 8px;
-	border-color: #555555;
+	border-color: #003300;
 	display: block;
 	text-align: center;
 	vertical-align: middle;
@@ -376,7 +376,7 @@ textarea {
 	/*background: none;
 	background-color: #2B5A88;*/
 	border: double;
-	border-color: #555555;
+	border-color: #005500;
 	left: 40%;
 	top: 80%;
 	text-align: center;
