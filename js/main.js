@@ -98,7 +98,7 @@ function checkQuestion(buttonId) {
 		score++;
 		displayQuestion(cur);
 	} else {
-		displayQueston(cur)
+		displayQueston(cur);
 	}
 }
 
