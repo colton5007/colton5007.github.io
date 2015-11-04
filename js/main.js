@@ -76,7 +76,7 @@ function displayQuestion() {
 	document.getElementById("questionNum").textContent = cur;
 	questionDiv.innerHTML = question.words;
 	createSoundFile(cur, questionDiv);
-	setQuestionStyle(count);
+	setQuestionStyle(question.count);
 	if(question.count==2) {
 	    displayChoice1(question.choices[0]);
 	    displayChoice2(question.choices[1]);
