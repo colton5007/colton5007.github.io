@@ -94,34 +94,11 @@ function checkQuestion(buttonId) {
 	var question = questions[cur - 1];
 	document.getElementById('info').innerHTML='';
 	cur++;
-	if (buttonId == 1) {
-		if (question.choice1.correct) {
-			score++;
-			displayQuestion(cur);
-		} else {
-			displayQueston(cur)
-		}
-	} else if (buttonId == 2){
-		if (question.choice2.correct) {
-			score++;
-			displayQuestion(cur);
-		} else {
-			displayQuestion(cur);
-		}
-	} else if (buttonId == 3){
-		if (question.choice3.correct) {
-			score++;
-			displayQuestion(cur);
-		} else {
-			displayQuestion(cur);
-		}
-	} else if (buttonId == 4){
-		if (question.choice4.correct) {
-			score++;
-			displayQuestion(cur);
-		} else {
-			displayQuestion(cur);
-		}
+	if (question.choices[buttonId-1].correct) {
+		score++;
+		displayQuestion(cur);
+	} else {
+		displayQueston(cur)
 	}
 }
 
