@@ -25,7 +25,13 @@ function Question(words, choices) {
 
 var questions = [
 new Question("Who is the shrew in the story?", [new Choice(false, "Bianca"), new Choice(true, "Katherine")]),
-new Question("Is the statement: Katherine must be married before Bianca, true or false?", [new Choice(true, "True"), new Choice(false, "False")])
+new Question("Is the statement: Katherine must be married before Bianca, true or false?", [new Choice(true, "True"), new Choice(false, "False")]),
+new Question("Does the story take place in Mantua?", [new Choice(false, "Yes"), new Choice(true, "No")]),
+new Question("Who is Bianca's father?", [new Choice(false, "Shakespeare"), new Choice(false, "Petruchio"), new Choice(true, "Baptista"), new Choice(false, "Lucentio")]),
+new Question("Does Petruchio originally agree to marry Katherine for money?", [new Choice(true, "Yes"), new Choice(false, "no")]),
+new Question("Who is late to Katherine and Petruchio’s wedding?", [new Choice(true, "Petruchio"), new Choice(false, "Katherine"), new Choice(false, "Baptista"), new Choice(false, "The Priest")])
+new Question("What does Lucentio disgues himself as to get closer to Bianca?", [new Choice(true, "A teacher"), new Choice(false, "A priest")]),
+
 ];
 
 function displayChoice1(choice) {
