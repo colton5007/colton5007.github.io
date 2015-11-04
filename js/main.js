@@ -24,8 +24,8 @@ function Question(words, choices) {
 }
 
 var questions = [
-new Question("Who is the shrew in the story?", {new Choice(false, "Bianca"), new Choice(true, "Katherine")}),
-new Question("Is the statement: Katherine must be married before Bianca, true or false?", {new Choice(true, "True"), new Choice(false, "False")})
+new Question("Who is the shrew in the story?", [new Choice(false, "Bianca"), new Choice(true, "Katherine")]),
+new Question("Is the statement: Katherine must be married before Bianca, true or false?", [new Choice(true, "True"), new Choice(false, "False")])
 ];
 
 function displayChoice1(choice) {
