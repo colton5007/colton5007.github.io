@@ -116,12 +116,14 @@ function gameOver(num) {
 	document.getElementById('questionNum').style.visibility='hidden';
 	document.getElementById('button1').style.visibility='hidden';
 	document.getElementById('button2').style.visibility='hidden';
+	document.getElementById('button3').style.visibility='hidden';
+	document.getElementById('button4').style.visibility='hidden';
 	var end = document.getElementById('end');
 	end.style.visibility='visible';
 	var restartButton = document.getElementById('again');
 	//end.textContent=deathMsgs[num-1] + '\n You completed ' + (score-1) + ' Labor' + labor + ' of Hercules';
 	//TODO ADD GAME OVER SCREEN INCLUDING CHARACTER ALIGNMENT
-	end.textContent="You scored a : "+Math.round(score/12) + "% on the Taming of the Shrew Quiz, retry for a better score!";
+	end.textContent="You scored a : "+Math.round(score/12*100) + "% on the Taming of the Shrew Quiz, retry for a better score!";
 	end.appendChild(restartButton);
 }
 
