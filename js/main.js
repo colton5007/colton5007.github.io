@@ -30,8 +30,7 @@ new Question("Does the story take place in Mantua?", [new Choice(false, "Yes"), 
 new Question("Who is Bianca's father?", [new Choice(false, "Shakespeare"), new Choice(false, "Petruchio"), new Choice(true, "Baptista"), new Choice(false, "Lucentio")]),
 new Question("Does Petruchio originally agree to marry Katherine for money?", [new Choice(true, "Yes"), new Choice(false, "no")]),
 new Question("Who is late to Katherine and Petruchio’s wedding?", [new Choice(true, "Petruchio"), new Choice(false, "Katherine"), new Choice(false, "Baptista"), new Choice(false, "The Priest")])
-new Question("What does Lucentio disgues himself as to get closer to Bianca?", [new Choice(true, "A teacher"), new Choice(false, "A priest")]),
-
+new Question("What does Lucentio disgues himself as to get closer to Bianca?", [new Choice(true, "A teacher"), new Choice(false, "A priest")])
 ];
 
 function displayChoice1(choice) {
