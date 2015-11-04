@@ -20,7 +20,7 @@ function createSoundFile(num, element) {
 function Question(words, choices) {
 	this.words = words;
 	this.choices = choices;
-	this.count = choices.size();
+	this.count = choices.length;
 }
 
 var questions = [
