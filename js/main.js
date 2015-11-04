@@ -39,20 +39,20 @@ function displayChoice2(choice) {
 }
 
 function displayChoice3(choice) {
-    var button3 = document.getElementyById("button3");
+    var button3 = document.getElementById("button3");
     button3.textContent = choice.words;
 }
 
 function displayChoice4(choice) {
-    var button4 = document.getElementyById("button4");
+    var button4 = document.getElementById("button4");
     button4.textContent = choice.words;
 }
 
 function setQuestionStyle(count) {
-    var button1 = document.getElementyById("button1");
-    var button2 = document.getElementyById("button2");
-    var button3 = document.getElementyById("button3");
-    var button4 = document.getElementyById("button4");
+    var button1 = document.getElementById("button1");
+    var button2 = document.getElementById("button2");
+    var button3 = document.getElementById("button3");
+    var button4 = document.getElementById("button4");
     if(count==2) {
         button3.style.visibility='hidden';
         button4.style.visibility='hidden';
