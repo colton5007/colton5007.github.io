@@ -30,7 +30,12 @@ new Question("Does the story take place in Mantua?", [new Choice(false, "Yes"), 
 new Question("Who is Bianca's father?", [new Choice(false, "Shakespeare"), new Choice(false, "Petruchio"), new Choice(true, "Baptista"), new Choice(false, "Lucentio")]),
 new Question("Does Petruchio originally agree to marry Katherine for money?", [new Choice(true, "Yes"), new Choice(false, "no")]),
 new Question("Who is late to Katherine and Petruchio’s wedding?", [new Choice(true, "Petruchio"), new Choice(false, "Katherine"), new Choice(false, "Baptista"), new Choice(false, "The Priest")]),
-new Question("What does Lucentio disgues himself as to get closer to Bianca?", [new Choice(true, "A teacher"), new Choice(false, "A priest")])
+new Question("What does Lucentio disgues himself as to get closer to Bianca?", [new Choice(true, "A teacher"), new Choice(false, "A priest")]),
+new Question("Why does Petruchio prevent Katherine from eating after their marriage?", [new Choice(false, "She is overweight and needs to eat less"), new Choice(false, "The food is poisoned"), new Choice(true, "The food is not good enough for her"), new Choice(false, "Petruchio does what he wants without any reason")]),
+new Question("Petruchio convinces Katherine to say what about the sun?", [new Choice(false, "That it is purple"), new Choice(false, "That it is the source of all evil"), new Choice(true, "That it is the moon"), new Choice(false, "That the earth revolves around")]),
+new Question("Lucentio’s primary servant is named:", [new Choice(false, "Carlo"), new Choice(true, "Tranio"), new Choice(false, "Baptista"), new Choice(false, "Shakespeare")]),
+new Question("Which of these were not a suitor of Bianca?", [new Choice(false, "Germio"), new Choice(false, "Hortensio"), new Choice(true, "Biondella"), new Choice(false, "Lucentio")]),
+new Question("Whose wife is the first to answer the summons from her spouse at the end of the play?", [new Choice(false, "Hortensio’s"), new Choice(false, "Lucentio’s"), new Choice(false, "Baptista’s"), new Choice(true, "Petruchio’s")])
 ];
 
 function displayChoice1(choice) {
@@ -82,7 +87,6 @@ function displayQuestion() {
 	var questionDiv = document.getElementById("info");
 	document.getElementById("questionNum").textContent = cur;
 	questionDiv.innerHTML = question.words;
-	createSoundFile(cur, questionDiv);
 	setQuestionStyle(question.count);
 	if(question.count==2) {
 	    displayChoice1(question.choices[0]);
@@ -115,11 +119,9 @@ function gameOver(num) {
 	var end = document.getElementById('end');
 	end.style.visibility='visible';
 	var restartButton = document.getElementById('again');
-	var labor = 's';
-	if(score==2) labor='';
 	//end.textContent=deathMsgs[num-1] + '\n You completed ' + (score-1) + ' Labor' + labor + ' of Hercules';
 	//TODO ADD GAME OVER SCREEN INCLUDING CHARACTER ALIGNMENT
-	end.textContent="Score: "+score;
+	end.textContent="You scored a : "+Math.round(score/12) + "% on the Taming of the Shrew Quiz, retry for a better score!";
 	end.appendChild(restartButton);
 }
 
