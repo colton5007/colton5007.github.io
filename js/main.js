@@ -24,44 +24,9 @@ function Question(words, choices) {
 }
 
 var questions = [
-new Question('Your next tasks is a bit unusual, because you are required to do some housekeeping work. You have to clean king Augean\'s stables that withholds more livestock then all other ranches\' livestock together in one day. How do you proceed?', 
-	new Choice(false, 'Yes'), 
-	new Choice(true, 'No')),
-new Question('Now you must drive away a flock of man-eating birds which have gathered near the town of Stymphalos. How do you proceed?', 
-	new Choice(false, 'Yes'), 
-	new Choice(true, 'No')),
-new Question('You are ordered to capture the bull of Crete which has caused King Minos to lose his wife\'s love and bore a half-man, half-bull monster. How do you proceed?', 
-	new Choice(false, 'Yes'), 
-	new Choice(true, 'No')),
-new Question('Eurystheus has sent you to steal the man-eating mares of Diomedes, the king of the Brinstones. How do you proceed?', 
-	new Choice(false, 'Yes'), 
-	new Choice(true, 'No')),
-new Question('Hippolyte\'s was notorious for leading the great female warriors called the Amazons, and was gifted a special leather belt by Aris, the war god.  Eurystheus wants to give it to his daughter and commanded you to bring back Hippolyte\'s leather belt. How do you proceed?', 
-	new Choice(true, 'Yes'), 
-	new Choice(false, 'No')),
-new Question('You are supposed to steal the cattle of Geryon, but first you must pass Geryon. How will you kill Geryon?', 
-	new Choice(true, 'Yes'), 
-	new Choice(false, 'No')),
-new Question('The next to last labor (one of the hardest) is to collect golden apples from Hera\'s tree and give it to Eurystheus. After fighting Kyknos, Antaeus, Bursitis, and killing the eagle that pecked at Prometheus\' liver for 30 years, you made a deal with Atlas to hold the weight of the world on your shoulders while he went to get the golden apple. He returns with the apples but insists on returning it to Eurystheus and let you hold up the world\'s weight for eternity. How do you proceed?', 
-	new Choice(false, 'Yes'), 
-	new Choice(true, 'No')),
-new Question('For the twelfth and final labor, you must go to the Underworld and kidnap the beast called Cerberus who guards the entrance to Hades. How do you proceed?', 
-	new Choice(true, 'Yes'), 
-	new Choice(false, 'No'))
+new Question("Who is the shrew in the story?", {new Choice(false, "Bianca"), new Choice(true, "Katherine")}),
+new Question("Is the statement: Katherine must be married before Bianca, true or false?", {new Choice(true, "True"), new Choice(false, "False")})
 ];
-
-var deathMsgs = ['Your arrows do nothing! The lion lunges and the rest is just mythology...',
-'You do not have the head of Medusa! It eats you as you fumble through your bag trying to find the nonexisting object.', 
-'The delicious goods tempt you while you wait, you decide to try them. They sure are delcious! And poisoness...',
-'The boar smashes the seal and gouges your perfect body into a shredded steak.', 
-'Apparently you can still smell poop under dirt.',
-'You look in your bag to grab one and you notice theres a note, it reads "I owe you 1 thunderbolt -Zeus", before you can think the birds snatch you up and drop you from hundreds of feet in the air.',
-'Turns out minotaurs can not see the color red.',
-'The horses begin kicking the dirt making a loud noise, the Brinstones notice you,  welp.',
-'Because of the temptation the drugs impose you try some, slowly you get addicted. Twelve years later you overdose.',
-'You cut your head off by acident as you try to cut his body in ten thousand peices.',
-'Daddy says no.',
-'Hades trades your life for Cerberus, you die and Cerberus is free.'];
 
 function displayChoice1(choice) {
 	var button1 = document.getElementById("button1");
