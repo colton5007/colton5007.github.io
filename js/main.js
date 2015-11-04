@@ -53,6 +53,8 @@ function setQuestionStyle(count) {
     var button2 = document.getElementById("button2");
     var button3 = document.getElementById("button3");
     var button4 = document.getElementById("button4");
+    button1.style.visibility='visible';
+    button2.style.visibility='visible';
     if(count==2) {
         button3.style.visibility='hidden';
         button4.style.visibility='hidden';
