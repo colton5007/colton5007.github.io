@@ -91,13 +91,13 @@ function setQuestionStyle(count) {
     if(count==2) {
         button3.style.visibility='hidden';
         button4.style.visibility='hidden';
-        button1.top=60%
-        button2.top=60%
+        button1.top='60%';
+        button2.top='60%';
     } else {
         button3.style.visibility='visible';
         button4.style.visibility='visible';
-        button1.top=50%
-        button2.top=50%
+        button1.top='50%';
+        button2.top='50%';
     }
 }
 
