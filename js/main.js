@@ -224,13 +224,11 @@ function start() {
 }
 
 function startGame() {
-	displayQuestion(cur);
 	document.getElementById('info').style.visibility='visible';
 	document.getElementById('questionNum').style.visibility='visible';
-	document.getElementById('button1').style.visibility='visible';
-	document.getElementById('button2').style.visibility='visible';
 	document.getElementById('start').style.visibility='hidden';
 	document.getElementById('start').innerHTML='';
+	displayQuestion(cur);
 }
 
 start();
