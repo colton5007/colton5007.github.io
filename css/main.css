@@ -419,3 +419,7 @@ textarea {
 	width: 30%;
 	height: 55%;
 }
+
+#start > p {
+    font-size: 1vw;
+}
