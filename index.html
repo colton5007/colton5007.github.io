@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Twelve Labors of Hercules</title>
+		<title>John Von Neumann</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,54 +13,41 @@
 		<link rel="stylesheet" href="css/main.css">
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
-	<body id="body">
+	<body id="body" onresize="setup()">
 		<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
+		<div id="map">
+			<div id="mapEu">
+				<img src="css/eumap.png" class="stretch"/>
+			</div>
+			<div id="mapNa">
+				<img src="css/namap.png" class="stretch"/>
+			</div>
+			<div id="regionSwitchButton" onclick="switchView()">
 
-		<!-- Add your site or application content here -->
-		<div id="info">
-
+			</div>
 		</div>
-		<div id="questionNum">
-
-		</div>
-		<div id="button1" onclick="checkQuestion(1)">
-
-		</div>
-
-		<div id="button2" onclick="checkQuestion(2)">
+		<div id="timeline">
 
 		</div>
 		
+		<div id="info" class="data">
+			<div id="return" onclick="exit()">	
+			</div>
+			<div id='back' onclick="previous()">
+			</div>
+			<div id='next' onclick="next()">
+			</div>
+		</div>
+		<div id="visual" class="data"></div>
 		<div id="start">
-			<audio autoplay>
-				<source src="audio/intro.mp3" type="audio/mpeg">
-			</audio>
-			<p>
-				Once upon a time there was a man named Hercules, he was both god and human. Desperately he wanted to become a god like his father Zeus. 
-				Zeus made a deal with him if he could complete 10(12) impossible tasks he would become a god. You are Hercules, the choice is up to you.
-			</p>
-			<div id="startButton" onclick="startGame()">
-				Start
-			</div>
-		</div>
-		
-		<div id="end">
-			<div id="again" onclick="restart()">
-				Restart
-			</div>
+			<h1>John Von Neumann</h1>
+			<p></p>
+			<img src="css/neumann.jpg"/>
 		</div>
 
-		<div id="transition">
-			<p>Originally you were only ordered to complete 10 tasks but since cleaning the stables and the killing the hydra didn't count because they weren't completely finished(hydra used the help of Iolaus and stables were washed with the help of the river instead of his own manpower) you have to complete 2 more.</p>
-			<div id="continue" onclick="continueGame()">
-				Continue
-			</div>
-		</div>
-		
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
-
 	</body>
 </html>
