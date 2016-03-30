@@ -347,11 +347,11 @@ textarea {
 }
 
 #info {
-	width: 38%;
-	height: 86%;
+	width: 78%;
+	height: 29%;
 	position: absolute;
-	left: 50vw;
-	top: 5%;
+	left: 9vw;
+	top: 62%;
 	border: 2vw groove #222288;
 	font-size: 1.1vw;
 	color: white;
@@ -359,11 +359,11 @@ textarea {
 }
 
 #visual {
-	width: 38%;
-	height: 86%;
+	width: 78%;
+	height: 57%;
 	position: absolute;
-	left: 10vw;
-	top: 5%;
+	left: 9vw;
+	top: 3%;
 	border: 2vw groove #222288;
 	background: #222222;
 	background-size: contain;
@@ -377,10 +377,18 @@ textarea {
 	position: absolute;
 }
 
+#back:hover {
+	background-image: url('backArrowHover.png');
+}
+
 #next {
 	background-image: url('nextArrow.png');
 	background-size: cover;
 	position: absolute;
+}
+
+#next:hover {
+	background-image: url('nextArrowHover.png');
 }
 
 #return {
@@ -388,4 +396,8 @@ textarea {
 	background-image: url('back.png');
 	background-size: cover;
 	position: absolute;
+}
+
+#return:hover {
+	background-image: url('backHover.png');
 }
