@@ -275,7 +275,7 @@ textarea {
 }
 
 * {
-	background-color: #222222;
+	background-color: #171212;
 }
 
 #title {
@@ -300,11 +300,11 @@ textarea {
 }
 
 .button {
-	border: double #2222DD 8px;
+	border: double #882222 8px;
 	position: absolute;
 	width: 30%;
 	height: 20%;
-	font-size: 3vw;
+	font-size: 2.5vw;
 	color: #FFFFFF;
 }
 .button > h1 {
@@ -314,7 +314,7 @@ textarea {
 }
 
 .button:hover {
-	border: double #229922 8px;
+	border: double #222288 8px;
 }
 
 #b0 {
@@ -352,7 +352,7 @@ textarea {
 	position: absolute;
 	left: 9vw;
 	top: 62%;
-	border: 2vw groove #222288;
+	border: 2vw groove #882222;
 	font-size: 1.2vw;
 	color: white;
 	visibility: hidden;
@@ -364,7 +364,7 @@ textarea {
 	position: absolute;
 	left: 9vw;
 	top: 3%;
-	border: 2vw groove #222288;
+	border: 2vw groove #882222;
 	background: #222222;
 	background-size: contain;
 	background-repeat: no-repeat;
