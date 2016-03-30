@@ -273,3 +273,75 @@ textarea {
     }
     
 }
+
+* {
+	background-color: #222222;
+}
+
+#title {
+	color: #FFFFFF;
+	position: absolute;
+	left: 50%;
+	font-size: 4vw;
+	top: -2.5%;
+}
+
+#start {
+	visibility: hidden;
+}
+
+#main {
+	position: absolute;
+	height: 85%;
+	top: 7.5%;
+	background-image: url('as-o.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.button {
+	border: double #2222DD 8px;
+	position: absolute;
+	width: 30%;
+	height: 20%;
+	font-size: 4vw;
+	color: #FFFFFF;
+}
+.button > h1 {
+	position: absolute;
+	left: 25%;
+	top: -20%;
+}
+
+.button:hover {
+	border: double #229922 8px;
+}
+
+#b0 {
+	visibility: hidden;
+}
+
+#b1 {
+	visibility: hidden;
+}
+
+
+#b2 {
+	top: 25%;
+	left: 2.5%;
+}
+
+#b3 {
+	top: 55%;
+	left: 2.5%;
+}
+
+#b4 {
+	top: 25%;
+	right: 2.5%;
+}
+
+#b5 {
+	top: 55%;
+	right: 2.5%;
+}

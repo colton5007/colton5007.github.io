@@ -13,10 +13,35 @@
 		<link rel="stylesheet" href="css/main.css">
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
-	<body id="body">
+	<body id="body" onload="startup()">
+		<h1 id="title">The Man of Control</h1>
 		<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
+		<div id="start">
+			
+		</div>
+		<div id="main">
+			
+		</div>
+		<div class="button" id="b0" onclick="buttonClick(0)"></div>
+		<div class="button" id="b1" onclick="buttonClick(1)"></div>
+		
+		<div class="button" id="b2" onclick="buttonClick(2)" onmouseenter="highlight(0)" onmouseleave="unhighlight()">
+			<h1>Fear</h1>
+		</div>
+		<div class="button" id="b3" onclick="buttonClick(3)" onmouseenter="highlight(1)" onmouseleave="unhighlight()">
+			<h1>Fear</h1>
+		</div>
+		<div class="button" id="b4" onclick="buttonClick(4)" onmouseenter="highlight(2)" onmouseleave="unhighlight()">
+			<h1>Fear</h1>
+		</div>
+		<div class="button" id="b5" onclick="buttonClick(5)" onmouseenter="highlight(3)" onmouseleave="unhighlight()">
+			<h1>Fear</h1>
+		</div>
+		
+		<div id="content"></div>
+		
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
 	</body>
