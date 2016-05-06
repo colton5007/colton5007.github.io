@@ -47,7 +47,8 @@ function start() {
 }
 
 function check(hex) {
-	if(hex == cur) {
+	console.log(hex == questions[cur].hex);
+	if(hex == questions[cur].hex) {
 		score++;
 	} else {
 		score = 0;
