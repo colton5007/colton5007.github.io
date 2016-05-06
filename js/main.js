@@ -40,8 +40,7 @@ function start() {
 	var canvas = document.getElementById("cuerpo");
 	canvas.width = window.innerWidth * (98 / 100);
 	canvas.height = window.innerHeight * (86 / 100);
-	var cuerpo = document.getElementById('cuerpo');
-	var context = cuerpo.getContext('2d');
+	var context = canvas.getContext('2d');
 	var img = new Image();
 	img.onload = function() {
 		context.drawImage(img, Math.floor(window.innerWidth * (48/50)), 0);
