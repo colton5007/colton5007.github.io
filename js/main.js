@@ -82,7 +82,7 @@ new Question("La Mano", "#f6ff4a"),
 new Question("El Codo", "#00ccbc"),
 new Question("El Brazo", "#d3186b"),
 new Question("El Pecho", "#29ff5f"),
-new Question("El Est&Ograve;mago", "#233ec6"),
+new Question("El Est&oacute;mago", "#233ec6"),
 new Question("Los Dedos de los Pies", "#81045a"),
 new Question("El Pie", "#3a7f52"),
 new Question("La Pierna", "#ff1b20")];
