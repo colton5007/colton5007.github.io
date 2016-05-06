@@ -291,6 +291,7 @@ textarea {
 	height: 10%;
 	border: 4px double #444499; 
 	color: white;
+	font: 20px;
 }
 
 #question {
@@ -301,6 +302,7 @@ textarea {
 	height: 10%;
 	border: 4px double #444499;
 	color: white;
+	font: 20px;
 }
 
 

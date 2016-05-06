@@ -57,7 +57,7 @@ function check(hex) {
 	nextQuestion();
 }
 function updateScore() {
-	$("#score").textContent = score;	
+	document.getElementById('score').innerHTML = score;
 }
 
 function nextQuestion() {
@@ -65,7 +65,7 @@ function nextQuestion() {
 	while(prev == cur) {
 		cur = Math.floor(Math.random() * (1 + 9 - 0));
 	}
-	$("question").textContent = questions[cur].display;
+	document.getElementById('question').innerHTML = questions[cur].display;
 }
 
 
