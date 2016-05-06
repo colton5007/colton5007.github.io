@@ -14,12 +14,21 @@
 		<script src="js/jquery-2.2.3.min.js"></script>
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
-	<body id="body" onload="start()">
+	<body id="body">
 		<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
+		<div id="start">
+			<h1>Instructions: <br></h1>
+			<h3>
+				The game will give you a part of the body in Spanish. Click on the corresponding body part on the body and if you are correct you're score increases by one. If wrong your score resets to zero.
+			</h3>
+			<div id="startButton" onclick("start()")>Start</div>
+		</div>
 		<canvas id="cuerpo" width="594" height="762"></canvas>
-		<div id="score"></div>
+		<div>
+			<h1 id="score"></h1>
+		</div>
 		<div id="question"></div>
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
