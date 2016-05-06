@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>The Man of Control</title>
+		<title>El Cuerpo</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,38 +11,15 @@
 		<!-- Place favicon.ico in the root directory -->
 
 		<link rel="stylesheet" href="css/main.css">
+		<script src="js/jquery-2.2.3.min.js"></script>
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
-	<body id="body" onload="startup()">
-		<h1 id="title">The Man of Control</h1>
+	<body id="body">
+		<h1 id="title">El Cuerpo</h1>
 		<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-		<div id="main">
-			
-		</div>
-		<div class="button" id="b2" onclick="buttonClick(0)" onmouseenter="highlight(0)" onmouseleave="unhighlight()">
-			<h1>Fear</h1>
-		</div>
-		<div class="button" id="b3" onclick="buttonClick(4)" onmouseenter="highlight(1)" onmouseleave="unhighlight()">
-			<h1>Boundaries</h1>
-		</div>
-		<div class="button" id="b4" onclick="buttonClick(8)" onmouseenter="highlight(2)" onmouseleave="unhighlight()">
-			<h1>Solitude</h1>
-		</div>
-		<div class="button" id="b5" onclick="buttonClick(12)" onmouseenter="highlight(3)" onmouseleave="unhighlight()">
-			<h1>Distractions</h1>
-		</div>
-		
-		<div id="info">
-			<div id="return" onclick="exit()">	
-			</div>
-			<div id='back' onclick="previous()">
-			</div>
-			<div id='next' onclick="next()">
-			</div>
-		</div>
-		<div id="visual"></div>
+		<canvas id="cuerpo" width="594" height="762"></canvas>
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
 	</body>
