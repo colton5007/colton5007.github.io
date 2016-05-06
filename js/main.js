@@ -37,7 +37,7 @@ $('#cuerpo').click(function(e) {
     var c = this.getContext('2d');
     var p = c.getImageData(x, y, 1, 1).data; 
     var hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
-    check(hex);
+    check(p);
     console.log(hex);
 });
 
@@ -45,6 +45,9 @@ function start() {
 	updateScore();
 	nextQuestion();
 	document.getElementById('start').style.visibility='hidden';
+	var canvas = document.getElementById("cuerpo");
+	canvas.width = window.innerWidth * (98/100);
+	canvas.height = window.innerHeight * (86/100);
 }
 
 function check(hex) {
