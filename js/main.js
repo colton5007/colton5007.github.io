@@ -45,7 +45,7 @@ function start() {
 	img.src = "css/body.png";
 	img.crossOrigin = "anonymous";
 	img.onload = function() {
-		context.drawImage(img, /*Math.floor(window.innerWidth * (48/50)*/ 0, 0);
+		context.drawImage(img, Math.floor(window.innerWidth * (48/100)), 0);
 	};
 
 }
