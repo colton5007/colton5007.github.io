@@ -1,0 +1,11 @@
+leg-FF1919
+foot-437F4E
+toes-7C085D
+stomach-29ff5f
+chest-58FF42
+arm-CC1A6D
+elbow-22CCBB
+hand-F6FF02
+fingers-FF8914
+neck-C942FF
+head-00FFFF

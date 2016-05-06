@@ -278,3 +278,36 @@ textarea {
 	background-color: #171212;
 }
 
+#cuerpo {
+	position: absolute;
+	left: 45%;
+}
+
+#score {
+	position:absolute;
+	left: 0px;
+	top: 0px;
+	width: 10%;
+	height: 10%;
+	border: 4px double #444499; 
+	color: white;
+}
+
+#question {
+	position:absolute;
+	left: 10%;
+	top: 0px;
+	width: 89%;
+	height: 10%;
+	border: 4px double #444499;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
