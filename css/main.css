@@ -282,6 +282,7 @@ textarea {
 	position: absolute;
 	left: 10%;
 	top: 5%;
+	border: 1vw double #444499;
 }
 
 #score {
@@ -290,9 +291,9 @@ textarea {
 	top: 0px;
 	width: 10%;
 	height: 10%;
-	border: 4px double #444499; 
+	border: 1vw double #444499; 
 	color: white;
-	font-size: 20px;
+	font-size: 40px;
 }
 
 #question {
@@ -301,7 +302,7 @@ textarea {
 	top: 0px;
 	width: 89%;
 	height: 10%;
-	border: 2px double #444499;
+	border: 1vw double #444499;
 	color: white;
 	font-size: 20px;
 }
