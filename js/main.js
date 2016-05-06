@@ -44,7 +44,7 @@ function start() {
 	var context = cuerpo.getContext('2d');
 	var img = new Image();
 	img.onload = function() {
-		context.drawImage(img, window.innerWidth * (48/50), 0);
+		context.drawImage(img, Math.floor(window.innerWidth * (48/50)), 0);
 	};
 	img.src = "css/body.png";
 	img.crossOrigin = "anonymous";
