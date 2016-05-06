@@ -38,6 +38,7 @@ $('#cuerpo').click(function(e) {
     var p = c.getImageData(x, y, 1, 1).data; 
     var hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
     check(hex);
+    console.log(hex);
 });
 
 function start() {
