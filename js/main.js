@@ -42,11 +42,12 @@ function start() {
 	canvas.height = window.innerHeight * (86 / 100);
 	var context = canvas.getContext('2d');
 	var img = new Image();
+	img.src = "css/body.png";
+	img.crossOrigin = "anonymous";
 	img.onload = function() {
 		context.drawImage(img, Math.floor(window.innerWidth * (48/50)), 0);
 	};
-	img.src = "css/body.png";
-	img.crossOrigin = "anonymous";
+
 }
 
 function check(hex) {
