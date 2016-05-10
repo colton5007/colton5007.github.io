@@ -275,8 +275,8 @@ textarea {
 }
 
 * {
-	background-color: #171212;
-	border: 1vw double #444499;
+	background-color: #5F9EA0;
+	color: #B22222;
 }
 
 #cuerpo {
@@ -291,8 +291,7 @@ textarea {
 	top: 0px;
 	width: 10%;
 	height: 10%;
-	border: 1vw double #444499; 
-	color: white;
+	border: 1vw double #FFFF99; 
 	font-size: 50px;
 }
 
@@ -302,18 +301,16 @@ textarea {
 	top: 0px;
 	width: 88%;
 	height: 10%;
-	border: 1vw double #444499;
-	color: white;
-	font-size: 50px;
+	border: 1vw double #FFFF99;
+	font-size: 54px;
 }
 
 #start {
 	position: absolute;
-	left: 0%;
-	top: 0%;
-	width: 98%;
-	height: 97%;
-	z-index: 100;
+	left: 36%;
+	top: 16%;
+	width: 62%;
+	height: 84%;
 	font-size: 40px;
 	color: white;
 }
@@ -329,8 +326,7 @@ textarea {
 	top: 80%;
 	width: 20%;
 	height: 10%;
-	border: 2vw double #444499;
-	background-color: #444444;
+	border: 2vw double #FFFF99;
 	font-size: 40px;
 	font-stretch: expanded;
 }
@@ -339,8 +335,29 @@ textarea {
 	background-color: #449944;
 }
 
+.stretch {
+	width: 100%;
+	height: 100%;
+}
 
+.part {
+	border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	background: #FFFF99;
+	border: 2px solid #550000;
+}
 
+.part:hover {
+	background-color: #22BB22;
+}
+
+#cuerpo {
+	position: fixed;
+	width: 30%;
+	height: 84%;
+	border: 2vw double #FFFF99;
+}
 
 
 

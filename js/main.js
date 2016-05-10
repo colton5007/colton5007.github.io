@@ -1,58 +1,36 @@
 var score = 0;
 var cur = 0;
-function findPos(obj) {
-	var curleft = 0, curtop = 0;
-	if (obj.offsetParent) {
-		do {
-			curleft += obj.offsetLeft;
-			curtop += obj.offsetTop;
-		} while (obj = obj.offsetParent);
-		return {
-			x : curleft,
-			y : curtop
-		};
-	}
-	return undefined;
-}
-
-function rgbToHex(r, g, b) {
-	if (r > 255 || g > 255 || b > 255)
-		throw "Invalid color component";
-	return ((r << 16) | (g << 8) | b).toString(16);
-}
-
-
-$('#cuerpo').click(function(e) {
-	var pos = findPos(this);
-	var x = e.pageX - pos.x;
-	var y = e.pageY - pos.y;
-	var c = this.getContext('2d');
-	var p = c.getImageData(x, y, 1, 1).data;
-	var hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
-	check(p);
-	console.log(hex);
-});
+var cuerpoWidth = 0;
+var cuerpoHeight = 0;
 
 function start() {
 	updateScore();
 	nextQuestion();
-	document.getElementById('start').style.visibility = 'hidden';
-	var canvas = document.getElementById("cuerpo");
-	canvas.width = window.innerWidth * (98 / 100);
-	canvas.height = window.innerHeight * (86 / 100);
-	var context = canvas.getContext('2d');
-	var img = new Image();
-	img.src = "css/body.png";
-	img.crossOrigin = "anonymous";
-	img.onload = function() {
-		context.drawImage(img, Math.floor((window.innerWidth * (48/100)-(this.width * 0.5))), 0);
-	};
-
+	document.getElementById('startButton').style.visibility = 'hidden';
+	var cuerpo = document.getElementById("cuerpo");
+	cuerpoWidth = cuerpo.children[0].clientWidth;
+	cuerpoHeight = cuerpo.children[0].clientHeight;
+	placeEvents();
 }
 
-function check(hex) {
-	console.log(hex == questions[cur].hex);
-	if (hex == questions[cur].hex) {
+
+function placeEvents() {
+	for (var i = 0; i < questions.length; i++) {
+		var e = document.createElement("div");
+		e.setAttribute('id', 'part' + i);
+		e.setAttribute('class', 'part');
+		e.setAttribute('onclick', 'check(' + i + ')');
+		e.style.position = "absolute";
+		e.style.left = Math.round(((questions[i].x) / 594) * cuerpoWidth) + 'px';
+		e.style.top = Math.round(((questions[i].y) / 762) * cuerpoHeight) + 'px';
+		e.style.visibility = 'visible';
+		document.getElementById('cuerpo').appendChild(e);
+	}
+}
+
+function check(id) {
+	
+	if (id == cur) {
 		score++;
 	} else {
 		score = 0;
@@ -63,7 +41,7 @@ function check(hex) {
 }
 
 function updateScore() {
-	document.getElementById('score').innerHTML = score;
+	document.getElementById('score').children[0].innerHTML = score;
 }
 
 function nextQuestion() {
@@ -71,13 +49,17 @@ function nextQuestion() {
 	while (prev == cur) {
 		cur = Math.floor(Math.random() * (1 + 9 - 0));
 	}
-	document.getElementById('question').innerHTML = questions[cur].display;
+	document.getElementById('question').children[0].innerHTML = "Toca " + questions[cur].display + ".";
 }
 
-function Question(display, hex) {
+function Question(display, id, x, y) {
 	this.display = display;
-	this.hex = hex;
+	this.id = id;
+	this.x = x;
+	this.y = y;
 }
 
-var questions = [new Question("La Cabeza", "#00fffe"), new Question("El Cuello", "#d03af8"), new Question("La Mano", "#f6ff4a"), new Question("El Codo", "#00ccbc"), new Question("El Brazo", "#d3186b"), new Question("El Pecho", "#29ff5f"), new Question("El Est&oacute;mago", "#233ec6"), new Question("Los Dedos de los Pies", "#81045a"), new Question("El Pie", "#3a7f52"), new Question("La Pierna", "#ff1b20")];
+var questions = [new Question("la cabeza", 0, 287, 159), new Question("el cuello", 1, 287, 232), new Question("la mano", 2, 97, 372), new Question("el codo", 3, 393, 370), new Question("el brazo", 4, 208, 335),
+ new Question("el pecho", 5, 287, 300), new Question("el est&oacute;mago", 6, 287, 409), new Question("los dedos de los pies", 7, 192, 702), new Question("el pie", 8, 340, 689),
+ new Question("la pierna", 8, 320, 559)];
 
