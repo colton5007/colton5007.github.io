@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>AP Biology Vocab</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	</head>
+	<body id="body">
+		<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		<!-- Add your site or application content here -->
+		<div id="info">
+
+		</div>
+		<div id="questionNum">
+
+		</div>
+		<div id="button1" onclick="checkQuestion(1)">
+
+		</div>
+
+		<div id="button2" onclick="checkQuestion(2)">
+
+		</div>
+		
+		<div id="button3" onclick="checkQuestion(3)">
+
+		</div>
+		
+		<div id="button4" onclick="checkQuestion(4)">
+
+		</div>
+		
+		<div id="textInput">
+			<textarea id = "textBox" rows="1" cols="60" autofocus="true"></textarea>
+		</div>
+		
+		<div id="submitButton" onclick="checkQuestion(5)">
+			Submit
+		</div>
+		
+		<div id="start">
+			<p>
+				This activity will ask you what the Biology suffix/prefix means. If correct you get a point. The correct answer will be shown after ever incorrect question. There are two difficulties to choose from: normal and hard. Normal will have 4 multiple choice answers, while hard will require a typed out response. On prefixes/suffixes with multiple meanings either one will suffice on hard.
+			</p>
+			<div id="startButton1" onclick="startGame(1)">
+				Normal
+			</div>
+			<div id="startButton2" onclick="startGame(2)">
+				Hard
+			</div>
+			
+		</div>
+		
+		<div id="end">
+			<div id="again" onclick="restart()">
+				Restart
+			</div>
+		</div>
+		
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>

@@ -1,13 +1,3 @@
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 html {
     color: #222;
     font-size: 1em;
@@ -15,12 +5,15 @@ html {
 }
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
+ * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
 
 ::selection {
     background: #b3d4fc;
@@ -41,14 +34,12 @@ hr {
 }
 
 /*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
  */
 
 audio,
 canvas,
-iframe,
 img,
 svg,
 video {
@@ -74,10 +65,10 @@ textarea {
 }
 
 /* ==========================================================================
-   Browser Upgrade Prompt
+   Browse Happy prompt
    ========================================================================== */
 
-.browserupgrade {
+.browsehappy {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
@@ -109,16 +100,16 @@ textarea {
    ========================================================================== */
 
 /*
- * Hide visually and from screen readers:
+ * Hide visually and from screen readers: h5bp.com/u
  */
 
 .hidden {
     display: none !important;
+    visibility: hidden;
 }
 
 /*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
  */
 
 .visuallyhidden {
@@ -133,9 +124,8 @@ textarea {
 }
 
 /*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
  */
 
 .visuallyhidden.focusable:active,
@@ -189,26 +179,21 @@ textarea {
 }
 
 @media print,
-       (min-resolution: 1.25dppx),
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
    Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
+   Inlined to avoid the additional HTTP request: h5bp.com/r
    ========================================================================== */
 
 @media print {
-    *,
-    *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
+    * {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -242,13 +227,8 @@ textarea {
         page-break-inside: avoid;
     }
 
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
     thead {
-        display: table-header-group;
+        display: table-header-group; /* h5bp.com/t */
     }
 
     tr,
@@ -271,94 +251,192 @@ textarea {
     h3 {
         page-break-after: avoid;
     }
+}
+
+.fancyNav{
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 60%;
+    margin-top: 30px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.fancyNav li{
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgb:(240, 240, 240, 0.3);
+    background-image: -webkit-gradient(linear,left top, left bottom,from(#222222), color-stop(0.5,#333333), color-stop(0.51, #444444));
+
+    box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+    -moz-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+    -webkit-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+
+    position:relative;
+
+    float: left;
+    list-style: none;
+}
+
+.fancyNav li:hover{
+     background-image: -webkit-gradient(linear,left top, left bottom,from(#444444), color-stop(0.5,#555555), color-stop(0.51, #666666));
+}
+
+.fancyNav li a{
+    text-decoration: none;
+    color: #94D9EB;
+}
+
+#home{
+    width: 100% - 12;
+    height: 1000px;
+    background-color: #555555;
+    border-right: 6px solid #222222;
+    border-left: 6px solid #222222;
+}
+
+#projects{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1000px;
+}
+
+#projects h1{
+    margin-left: 5%;
+    color: #9999CC;
+    text-decoration: underline;
+    text-align: center;
+}
+
+*{
+    background-color: #333333;
     
 }
 
-* {
-	background-color: #5F9EA0;
-	color: #B22222;
+#imgMe{
+    margin-left: 5%;
 }
 
-#cuerpo {
+.projContent{
+    display:none;
+    position: absolute;
+    list-style-type: none;
+}
+
+.displayProj{
+    display:block;
+    position: absolute;
+    list-style-type: none;
+    border: 8px solid #151515;
+    left: 5% - 4px;
+    top: 75px;
+}
+
+.displayProj p{
+    position: absolute;
+    
+}
+
+.displayProj h2{
+    position: absolute;
+}
+
+.displayProj div{
+    z-index: 1000px;
+    position: absolute;
+}
+
+.displayProj > img{
+    z-index:-1;
+}
+
+#projList li{
+    list-style-type: none; 
+}
+
+#homeButton{
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    background: none;
+}
+
+#homeButton img{
+    width: 64px;
+    height: 64px;
+    background: none;
+}
+
+#about{
+    width: 100% - 12px;
+    height: 1000px;
+    background-color: #555555;
+    border-right: 6px solid #222222;
+    border-left: 6px solid #222222;
+}
+
+
+#about p {
+	position: relative;
+	margin-left: 2px;
+	font-size: 30px;	
+}
+
+#about div{
+	background-color: #555555;
+	border-left: 3px solid #222222;
+	border-right: 3px solid #222222;
+	height: 850px;
+	position: absolute;	
+}
+
+#c1{
+	left: 1px;
+}
+
+#c2{
+	left: 50%;
+}
+#contact{
+    width: 50%;
+    height: 1000px;
+}
+
+#contact h1{
+    margin-left: 5%;
+    color: #9999CC;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#about h1{
+    margin-left: 5%;
+    color: #9999CC;
+    background-color: #555555;
+    text-decoration: underline;
+    font-size: 40px;
+}
+
+#homeText{
+	margin-left: 6%;
+}
+
+#homeText p{
+	background-color: #555555;
+	color: #84C9FB;
+}
+
+#title h1{
+	color: #84C9FB;
 	position: absolute;
-	left: 0px;
-	top: 11%;
+	left: 10px;
+	top: 3px;
+	font
 }
 
-#score {
-	position:absolute;
-	left: 0px;
-	top: 0px;
-	width: 10%;
-	height: 10%;
-	border: 1vw double #FFFF99; 
-	font-size: 50px;
+#about p{
+	color: #84C9FB;
+	background-color: #555555; 
 }
-
-#question {
-	position:absolute;
-	left: 10%;
-	top: 0px;
-	width: 88%;
-	height: 10%;
-	border: 1vw double #FFFF99;
-	font-size: 54px;
-}
-
-#start {
-	position: absolute;
-	left: 36%;
-	top: 16%;
-	width: 62%;
-	height: 84%;
-	font-size: 40px;
-	color: white;
-}
-
-#start > h1, #start > h3{
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
-#startButton {
-	position: absolute;
-	left: 40%;
-	top: 80%;
-	width: 20%;
-	height: 10%;
-	border: 2vw double #FFFF99;
-	font-size: 40px;
-	font-stretch: expanded;
-}
-
-#startButton:hover {
-	background-color: #449944;
-}
-
-.stretch {
-	width: 100%;
-	height: 100%;
-}
-
-.part {
-	border-radius: 50%;
-	width: 8px;
-	height: 8px;
-	background: #FFFF99;
-	border: 2px solid #550000;
-}
-
-.part:hover {
-	background-color: #22BB22;
-}
-
-#cuerpo {
-	position: fixed;
-	width: 30%;
-	height: 84%;
-	border: 2vw double #FFFF99;
-}
-
-
-
-
