@@ -102,7 +102,7 @@ var questions = ['a-, an-',
 'zyg-'
 ];
 
-var answers = ['no or not', 
+var answers = ['no, not', 
 'away from', 
 'of, pertaining to', 
 'having the character of', 
@@ -297,7 +297,7 @@ function checkQuestion(buttonId) {
 		for(x = 0; x < a.length; x++) {	
 			var ans = a[x].trim();
 			console.log(ans + ", " + input);
-			if(ans === input) {
+			if(ans.toLowerCase() === input.toLowerCase()) {
 				score++;
 				
 				displayQuestion();
