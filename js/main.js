@@ -1,6 +1,6 @@
 var current = 1;
 var max = 0;
-function Project(name, infoText, picture) {
+function Project(name, infoText, picture, url) {
 	this.name = name;
 	this.infoText = infoText;
 	this.picture = picture;
@@ -34,13 +34,14 @@ function Project(name, infoText, picture) {
 	info.style.backgroundColor = '#222222';
 
 	var a = document.createElement('a');
-	a.setAttribute("href", "bio/index.html");
+	a.setAttribute("href", url);
 
 	var image = document.createElement('img');
 	image.setAttribute('height', '600px');
 	image.setAttribute('width', window.innerWidth * 0.6 + 'px');
 	image.setAttribute('src', picture);
 	image.style.zIndex = "-1";
+	image.setAttribute('onclick', 'openProj(name)');
 	
 	a.appendChild(image);
 
@@ -100,7 +101,8 @@ function moveProject(direction) {
 }
 
 function setupProjects() {
-	var proj1 = new Project('AP Biology Summer Vocab Quiz', 'Quiz Yourself on the Vocab terms for the AP Bio summer assignment (Click on the image)', 'img/project1.jpg');
+	var proj1 = new Project('AP Biology Summer Vocab Quiz', 'Quiz Yourself on the Vocab terms for the AP Bio summer assignment (Click on the image)', 'img/project1.jpg', 'bio/index.html');
+	var proj2 = new Project('Github', 'Not a project per-say, but contains source for several unfinished or projects not listed here. (Click on the image)', 'img/project2.png', 'https://www.github.com/colton5007');
 	document.getElementsByClassName('projContent')[0].setAttribute('class', 'displayProj');
 }
 
@@ -108,15 +110,28 @@ function setupPage() {
 	this.setText();
 	this.setupProjects();
 	this.checkHide();
-	this.writeAbout();
 	document.getElementById('homeButton').style.top = window.innerHeight - 84 + 'px';
 	document.getElementById('homeButton').style.left = window.innerWidth - 84 + 'px';
-	document.getElementById('c1').style.width = window.innerWidth/2 - 16 + 'px';
-	document.getElementById('c2').style.width = window.innerWidth/2 - 16 + 'px';
+	document.getElementById('projects').style.height = window.innerHeight + 'px';
+	document.getElementById('home').style.width = window.innerWidth-20 + 'px';
+	document.getElementById('contact').style.width = window.innerWidth-20 + 'px';
+	document.getElementById('projects').style.width = window.innerWidth-20 + 'px';
+	document.getElementById('contact').style.height = window.innerHeight + 'px';
+	var navW = document.getElementById('fancyNav').offsetWidth;
+	document.getElementById('fancyNav').style.left = (window.innerWidth-navW-50) + 'px';
+	document.getElementById('projects').style.top = window.innerHeight + 'px';
+	document.getElementById('contact').style.top = (window.innerHeigh *2) + 'px';
+	
+	var homeH = window.innerHeight;
+	document.getElementById('home').style.height =  homeH * 0.9+ 'px';
+	document.getElementById('home').style.top=  homeH * 0.1 + 'px';
+	document.getElementById('title').style.height = homeH * 0.1 + 'px';
+	
+	document.getElementById('dailyPic').children[0].style.width = window.innerWidth * 0.4 + 'px';
 }
 
 function scrollTo(element, to, duration) {
-	var start = element.scrollTop, change = to - start, currentTime = 0, increment = 20;
+	var start = element.scrollTop, change = to - start, currentTime = 0, increment = 30;
 
 	var animateScroll = function() {
 		currentTime += increment;
@@ -165,8 +180,8 @@ function setText() {
 	
 	document.getElementById('homeText').style.fontSize = homeTextSize + "px";
 	document.getElementById('homeText').style.marginTop = top + "px";
+	document.getElementById('contactInfo').style.fontSize = homeTextSize-40 + 'px';
 	
-	document.getElementById('titleContent').style.fontSize = Math.round(size * 1.5) + 'px';
 };
 
 function checkHide() {
@@ -191,14 +206,4 @@ function Paragraph(content, collumn){
 	document.getElementById('c' + collumn).appendChild(p);
 }
 
-function writeAbout(){
-	var about = document.getElementById('about');
-	new Paragraph("Hello, I am Colton Sandvik, I'm a high school student at Bethany High School. This website is currently pending a lot of changes in the project section.", 1);
-}
-
-function openProj(i) {
-	if(i == 1) {
-		
-	}
-}
 

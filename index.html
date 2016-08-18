@@ -21,28 +21,25 @@
 
 		<!-- Add your site or application content here -->
 		<div class = "main">
-			<div id = "home">
-				<div id="title">
-					<h1 id="titleContent">
-						Colton's Website
-					</h1>
-				</div>
-				<nav>
-					<ul class="fancyNav">
-						<li id="homeli">
-							<a class="navButton">Home</a>
+			<div id="title">
+					<nav>
+					<ul id="fancyNav">
+						<li id="homeli" class="navButton">
+							<a onclick="scroll(document.getElementById('title'), 0)">Home</a>
 						</li>
 						<li id="projectsli" class="navButton">
 							<a onclick="scroll(document.getElementById('projects'), 0)">Projects</a>
-						</li>
-						<li id="aboutli" class="navButton">
-							<a onclick="scroll(document.getElementById('about'), 0)">About</a>
 						</li>
 						<li id="contactli" class="navButton">
 							<a onclick="scroll(document.getElementById('contact'), 0)">Contact</a>
 						</li>
 					</ul>
 				</nav>
+				</div>
+			<div id = "home">
+				<div id="dailyPic">
+					<img src="img/daily.jpg">
+				</div>
 				<div id="homeText">
 					<p>
 						  Welcome to 
@@ -58,19 +55,13 @@
 
 				</ul>
 			</div>
-			<div id="about">
-				<h1>About Colton</h1>
-				<div id="c1">
-					
-				</div>
-				<div id="c2">
-					
-				</div>
-			</div>
+			
 			<div id="contact">
 				<h1>Contact</h1>
+				<h3 id="contactInfo">You can contact Colton Sandvik by email at the following addresses: <br> colton.chase.sandvik@gmail.com <br> coltonsandvik18@bethanyschools.com
+				</h3>
 			</div>
-			<div id="homeButton" onclick="scroll(document.getElementById('home'), 0.6)">
+			<div id="homeButton" onclick="scroll(document.getElementById('title'), 0.6)">
 				<img src="img/home.png"/>
 			</div>
 		</div>
