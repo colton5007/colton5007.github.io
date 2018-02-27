@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Dracula</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	</head>
+	<body id="body" onresize="setup()">
+		<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<div id="map">
+			<div id="dracMap">
+				<img src="css/dracmap.jpg" class="stretch"/>
+			</div>
+			
+		</div>
+		<div id="info" class="data">
+			<div id="return" onclick="exit()">	
+			</div>
+			<div id='back' onclick="previous()">
+			</div>
+			<div id='next' onclick="next()">
+			</div>
+		</div>
+		<div id="visual" class="data"></div>
+		<div id="start">
+			<h1>Dracula</h1>
+			<h3>By Bram Stoker</h3>
+			<img src="css/dracula.jpg"/>
+		</div>
+
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
